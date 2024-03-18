@@ -1,3 +1,4 @@
 .page {
-  font-family: var(--font);
+  font-family: var(--font, sans-serif);
+  background-color: var(--background-color);
 }
