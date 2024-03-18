@@ -2,7 +2,7 @@ import React from 'react';
 import classes from './Header.module.css';
 import likeLogo from '../../images/like.svg';
 import cartLogo from '../../images/cart.svg';
-import Logo from '../footer/logo/Logo';
+import Logo from '../logo/Logo';
 
 const Header = () => {
   return (

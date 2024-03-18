@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './Footer.module.css';
-import Logo from './logo/Logo';
+import Logo from '../logo/Logo';
 import langLogo from '../../images/lang.svg';
 import vkLogo from '../../images/vk.svg';
 import telegramLogo from '../../images/telegram.svg';

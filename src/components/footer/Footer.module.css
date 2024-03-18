@@ -39,7 +39,7 @@
   display: block;
   margin-block-start: 2px;
   opacity: 0.6;
-  background-color: var(--accent-color);
+  background-color: var(--interaction-color);
   transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: left;
@@ -105,7 +105,7 @@
 }
 
 .languages__button_active {
-  color: #ffa542;
+  color: var(--accent-color);
   pointer-events: none;
 }
 

@@ -1,6 +1,7 @@
 :root {
   --font: 'Montserrat';
   --background-color: #eaeaea;
-  --accent-color: #736e6e;
+  --accent-color: #ffa542;
   --element-background-color: #fff;
+  --interaction-color: #736e6e;
 }

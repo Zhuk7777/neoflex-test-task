@@ -23,7 +23,7 @@
   display: block;
   margin-block-start: 2px;
   opacity: 0.6;
-  background-color: var(--accent-color);
+  background-color: var(--interaction-color);
   transition: transform 0.3s ease;
   transform: scaleX(0);
   transform-origin: left;
@@ -54,7 +54,7 @@
   color: #fff;
   font-weight: 500;
   font-size: 15px;
-  background-color: #ffa542;
+  background-color: var(--accent-color);
   block-size: 17.4px;
   inline-size: 17.4px;
 } 
