@@ -1,0 +1,95 @@
+.card {
+  border-radius: 30px;
+  padding: 15px 0 26.6px;
+  font-family: var(--font, sans-serif);
+  background-color: var(--element-background-color);
+  max-block-size: 407px;
+  max-inline-size: 350px;
+}
+
+.card__image {
+  margin: 0 65px 53px 66px;
+  object-fit: cover;
+  block-size: 237px;
+  inline-size: 220px;
+}
+
+.card-description {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 25px;
+  margin: 0 13px 0 21px;
+}
+
+.card__title {
+  margin-inline-start: 2px;
+  color: #1C1C27;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.7px;
+}
+
+.card__price {
+  position: relative;
+  justify-self: end;
+  margin-inline-end: 7px;
+  color: var(--accent-color);
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.7px;
+}
+
+.card__price::after {
+  content: attr(data-prev-price);
+  position: absolute;
+  top: 18px;
+  right: 7px;
+  display: flex;
+  color: #ffce7f;
+  font-weight: 600;
+  font-size: 13px;
+  text-decoration: line-through;
+  inline-size: 44px;
+  
+}
+
+.card__rate {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: start;
+  color: #838383;
+}
+
+.card__rate-value {
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.7px;
+}
+
+.card__button {
+  justify-self: end;
+  margin-block-start: 3px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  padding: 3px;
+  color: #000 ;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.7px;
+  background-color: transparent;
+  transition: border-color 0.25s, opacity 0.25s;
+  cursor: pointer;
+}
+
+.card__button:focus {
+  outline: none;
+}
+
+.card__button:focus-visible {
+  border-color: #000;
+}
+
+.card__button:hover {
+  opacity: 0.6;
+}
