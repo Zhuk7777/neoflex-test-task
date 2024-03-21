@@ -1,6 +1,7 @@
 .card {
   border-radius: 30px;
   padding: 15px 0 26.6px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   font-family: var(--font, sans-serif);
   background-color: var(--element-background-color);
   max-block-size: 407px;
@@ -9,48 +10,61 @@
 
 .card__image {
   margin: 0 65px 53px 66px;
-  object-fit: cover;
+  object-fit: contain;
+  object-position: center;
   block-size: 237px;
   inline-size: 220px;
 }
 
-.card-description {
+.card__description {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 18px 0 21px;
+}
+
+.card__description:has(.card__prev-price) {
+  margin-inline-end: 14px;
+}
+
+.card__description-section {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  row-gap: 25px;
-  margin: 0 13px 0 21px;
+  grid-template-columns: 1fr;
+}
+
+.card__description-section:first-child {
+  max-block-size: 72.3px;
 }
 
 .card__title {
   margin-inline-start: 2px;
-  color: #1C1C27;
+  color: #1c1c27;
   font-weight: 600;
   font-size: 17px;
   line-height: 20.7px;
 }
 
 .card__price {
-  position: relative;
   justify-self: end;
-  margin-inline-end: 7px;
+  margin-inline-end: 6px;
   color: var(--accent-color);
   font-weight: 600;
   font-size: 17px;
   line-height: 20.7px;
 }
 
-.card__price::after {
-  content: attr(data-prev-price);
-  position: absolute;
-  top: 18px;
-  right: 7px;
-  display: flex;
+.card__prev-price {
+  justify-self: end;
+  margin-inline-end: 13px;
+  margin-block-end: -10px;
   color: #ffce7f;
   font-weight: 600;
   font-size: 13px;
   text-decoration: line-through;
-  inline-size: 44px;
-  
+
+}
+
+.card__prev-price_invisible {
+  display: none;
 }
 
 .card__rate {
@@ -58,10 +72,11 @@
   align-items: center;
   gap: 10px;
   align-self: start;
+  margin-block-start: 26px;
   color: #838383;
 }
 
-.card__rate-value {
+.rate__value {
   font-weight: 600;
   font-size: 17px;
   line-height: 20.7px;
@@ -69,7 +84,7 @@
 
 .card__button {
   justify-self: end;
-  margin-block-start: 3px;
+  margin-block-start: 23px;
   border: 1px solid transparent;
   border-radius: 7px;
   padding: 3px;

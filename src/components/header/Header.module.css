@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 9px;
   font-family: var(--font, sans-serif);
-  block-size: 60px;
+  min-block-size: 60px;
 }
 
 .header__list {

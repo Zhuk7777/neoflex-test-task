@@ -6,7 +6,6 @@
   padding: 29px 27px 32.5px 29px;
   font-family: var(--font, sans-serif);
   background-color: var(--element-background-color);
-  block-size: 149px;
 }
 
 .footer__menu {
