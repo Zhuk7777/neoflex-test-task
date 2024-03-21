@@ -46,7 +46,7 @@ const Footer = () => {
         </div>
       </div>
       <ul className={classes['footer__social-list']}>
-        <li className={classes['footer_social-list-item']}>
+        <li className={classes['footer__social-list-item']}>
           <a href="#0" className={classes['footer__social-link']} target="_blank">
             <img
               src={vkLogo}
@@ -55,7 +55,7 @@ const Footer = () => {
             />
           </a>
         </li>
-        <li className={classes['footer_social-list-item']}>
+        <li className={classes['footer__social-list-item']}>
           <a href="#0" className={classes['footer__social-link']} target="_blank">
             <img
               src={telegramLogo}
@@ -64,7 +64,7 @@ const Footer = () => {
             />
           </a>
         </li>
-        <li className={classes['footer_social-list-item']}>
+        <li className={classes['footer__social-list-item']}>
           <a href="#0" className={classes['footer__social-link']} target="_blank">
             <img
               src={whatsappLogo}

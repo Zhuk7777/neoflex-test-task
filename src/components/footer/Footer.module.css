@@ -141,3 +141,38 @@
   inline-size: 30.1px;
   block-size: 20.6px;
 }
+
+@media (width <= 768px) {
+  .footer { 
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px auto;
+    justify-items: start;
+  }
+
+  .footer__menu {
+    grid-row: 2;
+    justify-self: start;
+    margin-inline-start: 0;
+  }
+
+  .footer__link {
+    font-size: 16px;
+  }
+
+  .footer__settings {
+    grid-column: 3;
+    grid-row: 2;
+    justify-self: end;
+  }
+
+  .footer__settings-link {
+    inline-size: 143px;
+  }
+
+  .footer__social-list {
+    grid-column: 2/4;
+    justify-self: end;
+    gap: 9px;
+  }
+}
