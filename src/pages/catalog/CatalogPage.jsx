@@ -1,7 +1,7 @@
 import React from 'react';
 import classes from './CatalogPage.module.css';
-import Card from '../../components/card/Card';
 import { headphones } from './headphones';
+import CatalogCard from '../../components/card/CatalogCard';
 
 const CatalogPage = () => {
 
@@ -14,7 +14,7 @@ const CatalogPage = () => {
             sections.push(
               <section className={classes['catalog__section']} key={sections.length}>
                 <h2 className={classes['catalog__section-title']}>{title}</h2>
-                {headphones[title].map(headphone => <Card key={headphone.id} cardData={headphone}/>)}
+                {headphones[title].map(headphone => <CatalogCard key={headphone.id} cardData={headphone}/>)}
               </section>
           )
           return sections;

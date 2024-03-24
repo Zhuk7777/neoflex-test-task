@@ -1,10 +1,10 @@
 import React from 'react';
 import classes from './Footer.module.css';
 import Logo from '../logo/Logo';
-import langLogo from '../../images/lang.svg';
-import vkLogo from '../../images/vk.svg';
-import telegramLogo from '../../images/telegram.svg';
-import whatsappLogo from '../../images/whatsapp.svg';
+import langIcon from '../../images/lang.svg';
+import vkIcon from '../../images/vk.svg';
+import telegramIcon from '../../images/telegram.svg';
+import whatsappIcon from '../../images/whatsapp.svg';
 
 const Footer = () => {
   return (
@@ -27,7 +27,7 @@ const Footer = () => {
         <a href="#0" className={`${classes['footer__link']} ${classes['footer__settings-link']}`}>Условия сервиса</a>
         <div className={classes['footer__languages']}>
           <img
-            src={langLogo}
+            src={langIcon}
             alt="Иконка языков" 
             className={classes['languages__logo']}
           />
@@ -49,7 +49,7 @@ const Footer = () => {
         <li className={classes['footer__social-list-item']}>
           <a href="#0" className={classes['footer__social-link']} target="_blank">
             <img
-              src={vkLogo}
+              src={vkIcon}
               alt="Мы в VK" 
               className={`${classes['footer__social-link-icon']} ${classes['footer__social-link-icon_small']}`}
             />
@@ -58,7 +58,7 @@ const Footer = () => {
         <li className={classes['footer__social-list-item']}>
           <a href="#0" className={classes['footer__social-link']} target="_blank">
             <img
-              src={telegramLogo}
+              src={telegramIcon}
               alt="Мы в Telegram" 
               className={classes['footer__social-link-icon']}
             />
@@ -67,7 +67,7 @@ const Footer = () => {
         <li className={classes['footer__social-list-item']}>
           <a href="#0" className={classes['footer__social-link']} target="_blank">
             <img
-              src={whatsappLogo}
+              src={whatsappIcon}
               alt="Мы в WhatsApp" 
               className={classes['footer__social-link-icon']}
             />

@@ -1,0 +1,121 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  border-radius: 30px;
+  padding: 18px 28px 15px 18.8px;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+  font-family: var(--font, sans-serif);
+  background-color: var(--element-background-color);
+  max-inline-size: 633px;
+  inline-size: 100%;
+  max-block-size: 218px;
+}
+
+.card__section:first-of-type  {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 19px;
+  column-gap: 23.4px;
+}
+
+.card__section:last-of-type {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.card__image {
+  object-fit: cover;
+  object-position: center;
+  inline-size: 146.5px;
+  block-size: 136px;
+}
+
+.card__description {
+  margin-block-start: 58px;
+}
+
+.card__title {
+  margin-block-end: 10px;
+  color: #1c1c27;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 20.7px;
+}
+
+.card__price {
+  color: #aaa;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18.3px;
+}
+
+.card__counter {
+  display: flex;
+  justify-self: center;
+  align-items: center;
+  gap: 25px;
+}
+
+.card__counter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #ffce7f;
+  transition: opacity 0.25s;
+  cursor: pointer;
+  inline-size: 30px;
+  block-size: 30px;
+}
+
+.card__counter-button:focus {
+  outline: none;
+}
+
+.card__counter-button:focus-visible {
+  opacity: 0.6;
+}
+
+.card__counter-button:hover {
+  opacity: 0.6;
+}
+
+.card__counter-value {
+  color: #000;
+  font-weight: 600;
+  font-size: 17px;
+  line-height: 20.7px;
+}
+
+.card__remove-button {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  transition: opacity 0.25s;
+  cursor: pointer;
+}
+
+.card__remove-button:focus {
+  outline: none;
+}
+
+.card__remove-button:focus-visible {
+  opacity: 0.6;
+}
+
+.card__remove-button:hover {
+  opacity: 0.6;
+}
+
+.card__remove-icon {
+  block-size: 17px;
+  inline-size: 20px;
+}
+
+.card__total-price {
+  margin-block-end: 7px;
+  color: #1c1c27;
+}

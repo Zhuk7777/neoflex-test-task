@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './Card.module.css';
-import starLogo from '../../images/star.svg';
+import classes from './CatalogCard.module.css';
+import starIcon from '../../images/star.svg';
 
-const Card = ({cardData}) => {
+const CatalogCard = ({cardData}) => {
   return (
     <div className={classes['card']}>
       <img className={classes['card__image']} src={require(`${cardData.img}`)} alt={`Изображение модели ${cardData.title}`} />
@@ -10,7 +10,7 @@ const Card = ({cardData}) => {
         <section className={classes['card__description-section']}>
           <h3 className={classes['card__title']}>{cardData.title}</h3>
           <div className={classes['card__rate']}>
-            <img className={classes['rate__star']} src={starLogo} alt="Звезда" />
+            <img className={classes['rate__star']} src={starIcon} alt="Звезда" />
             <span className={classes['rate__value']}>{cardData.rate}</span>
           </div>
         </section>
@@ -30,4 +30,4 @@ const Card = ({cardData}) => {
   );
 };
 
-export default Card;
+export default CatalogCard;

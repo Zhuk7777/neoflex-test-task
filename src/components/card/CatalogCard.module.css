@@ -4,8 +4,14 @@
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   font-family: var(--font, sans-serif);
   background-color: var(--element-background-color);
+  transition: transform 0.25s;
+  cursor: pointer;
   max-block-size: 407px;
   max-inline-size: 350px;
+}
+
+.card:hover {
+  transform: translateY(-3px);
 }
 
 .card__image {
