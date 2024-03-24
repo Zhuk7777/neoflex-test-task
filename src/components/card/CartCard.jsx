@@ -3,18 +3,19 @@ import classes from './CartCard.module.css';
 import removeIcon from '../../images/remove.svg';
 import minusIcon from '../../images/minus.svg';
 import plusIcon from '../../images/plus.svg';
-import image from './assets/S8521.png'
 
-const CartCard = ({cardData}) => {
+const CartCard = ({cardData, className}) => {
   const [counter, setCounter] = useState(1);
 
   return (
-    <div className={classes['card']}>
+    <div className={`${classes['card']} ${className}`}>
       <section className={classes['card__section']}>
-        <img className={classes['card__image']} src={image} alt={`Изображение модели Apple BYZ S8521`}/>
+        <img className={classes['card__image']} src={require(`${cardData.img}`)} alt={`Изображение модели ${cardData.title}`}/>
         <div className={classes['card__description']}>
-          <h3 className={classes['card__title']}>Apple BYZ S8521</h3>
-          <span className={classes['card__price']}>2 927 ₽</span>
+          <h3 className={classes['card__title']}>{cardData.title}</h3>
+          <span className={classes['card__price']}>
+            {cardData.discountedPrice ? `${cardData.discountedPrice} ₽` : `${cardData.price} ₽`}
+          </span>
         </div>
         <div className={classes['card__counter']}>
           <button type="button" className={classes['card__counter-button']}>
@@ -30,7 +31,7 @@ const CartCard = ({cardData}) => {
         <button type="button" className={classes['card__remove-button']}>
           <img className={classes['card__remove-icon']} src={removeIcon} alt="Иконка удаления"/>
         </button>
-        <span className={`${classes['card__price']} ${classes['card__total-price']}`}>2 927 ₽</span>
+        <span className={`${classes['card__price']} ${classes['card__total-price']}`}>{cardData.price} ₽</span>
       </section>
     </div>
   );

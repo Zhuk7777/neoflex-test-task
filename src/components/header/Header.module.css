@@ -39,11 +39,23 @@
   transform: scaleX(1);
 }
 
+.header__list-item:has(.header__link_active) {
+  pointer-events: none;
+}
+
 .header__link {
   position: relative;
 }
 
-.header__link::after {
+.header__link:focus {
+  outline: none;
+}
+
+.header__link_active {
+  opacity: 0.6;
+}
+
+.header__link-counter {
   content: attr(data-count);
   position: absolute;
   top: -12px;
@@ -55,13 +67,14 @@
   color: #fff;
   font-weight: 500;
   font-size: 15px;
+  line-height: 18px;
   background-color: var(--accent-color);
-  block-size: 17.4px;
-  inline-size: 17.4px;
-} 
+  block-size: 18px;
+  inline-size: 18px;
+}
 
-.header__link:focus {
-  outline: none;
+.header__link-counter_invisible {
+  display: none;
 }
 
 .header__icon {

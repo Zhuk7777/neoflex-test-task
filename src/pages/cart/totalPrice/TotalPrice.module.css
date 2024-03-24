@@ -6,9 +6,8 @@
   padding-block-start: 21px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
   background-color: var(--element-background-color);
-  max-inline-size: 350px;
-  inline-size: 100%;
-  max-block-size: 120px;
+  inline-size: 350px;
+  block-size: 120px;
 }
 
 .total-price-card__text {
@@ -55,9 +54,9 @@
 }
 
 .total-price-card__button:focus-visible {
-  opacity: 0.7;
+  opacity: 0.8;
 }
 
 .total-price-card__button:hover {
-  opacity: 0.7;
+  opacity: 0.8;
 }
