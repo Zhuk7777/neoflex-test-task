@@ -5,27 +5,28 @@ import langIcon from '../../images/lang.svg';
 import vkIcon from '../../images/vk.svg';
 import telegramIcon from '../../images/telegram.svg';
 import whatsappIcon from '../../images/whatsapp.svg';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
-    <footer className={classes['footer']}>
+    <footer className={classes['footer']} aria-label="Подвал">
       <Logo>qpick</Logo>
       <nav className={classes['footer__menu']}>
         <ul className={classes['footer__menu-list']}>
           <li className={classes['footer__menu-list-item']}>
-            <a href="#0" className={classes['footer__link']}>Избранное</a>
+            <Link to="/favourites" className={classes['footer__link']}>Избранное</Link>
           </li>
           <li className={classes['footer__menu-list-item']}>
-            <a href="#0" className={classes['footer__link']}>Корзина</a>
+            <Link to="/cart" className={classes['footer__link']}>Корзина</Link>
           </li>
           <li className={classes['footer__menu-list-item']}>
-            <a href="#0" className={classes['footer__link']}>Контакты</a>
+            <Link to="/contacts" className={classes['footer__link']}>Контакты</Link>
           </li>
         </ul>
       </nav>
       <div className={classes['footer__settings']}>
-        <a href="#0" className={`${classes['footer__link']} ${classes['footer__settings-link']}`}>Условия сервиса</a>
-        <div className={classes['footer__languages']}>
+        <Link to="/conditions" className={`${classes['footer__link']} ${classes['footer__settings-link']}`}>Условия сервиса</Link>
+        <div className={classes['footer__languages']} aria-label="Смена языка">
           <img
             src={langIcon}
             alt="Иконка языков" 
@@ -45,9 +46,14 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <ul className={classes['footer__social-list']}>
+      <ul className={classes['footer__social-list']} aria-label="Социальные сети">
         <li className={classes['footer__social-list-item']}>
-          <a href="#0" className={classes['footer__social-link']} target="_blank">
+          <a
+            href="https://vk.com/neoflex_ru"
+            className={classes['footer__social-link']}
+            target="_blank"
+            aria-label="Ссылка на VK"
+          >
             <img
               src={vkIcon}
               alt="Мы в VK" 
@@ -56,7 +62,12 @@ const Footer = () => {
           </a>
         </li>
         <li className={classes['footer__social-list-item']}>
-          <a href="#0" className={classes['footer__social-link']} target="_blank">
+          <a
+            href="https://t.me/neoflexcareers"
+            className={classes['footer__social-link']}
+            target="_blank"
+            aria-label="Ссылка на Telegram"
+          >
             <img
               src={telegramIcon}
               alt="Мы в Telegram" 
@@ -65,7 +76,12 @@ const Footer = () => {
           </a>
         </li>
         <li className={classes['footer__social-list-item']}>
-          <a href="#0" className={classes['footer__social-link']} target="_blank">
+          <a
+          href="https://wa.me/74959842513?text=Здравствуйте%2C+у+меня+есть+вопрос"
+          className={classes['footer__social-link']}
+          target="_blank"
+          aria-label="Ссылка на WhatsApp"
+          >
             <img
               src={whatsappIcon}
               alt="Мы в WhatsApp" 

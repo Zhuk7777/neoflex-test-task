@@ -5,10 +5,10 @@ import TotalPrice from './totalPrice/TotalPrice';
 import { AppContext } from '../../providers/AppProvider';
 
 const CartPage = () => {
-  const [cart, setCart] = useContext(AppContext);
+  const {cart} = useContext(AppContext);
   const cards = useMemo(()=> {
     const cartArray = JSON.parse(cart);
-    return cartArray.map((cardData) => <CartCard cardData={cardData}/>)
+    return cartArray.map((cardData) => <CartCard key={cardData.id} cardData={cardData}/>)
   }, [cart])
 
   return (

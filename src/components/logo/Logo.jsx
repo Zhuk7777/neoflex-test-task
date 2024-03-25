@@ -4,7 +4,14 @@ import { Link } from 'react-router-dom';
 
 const Logo = ({children}) => {
   return (
-    <Link to="/" className={classes['logo']}>{children}</Link>
+    <Link
+      to="/"
+      className={classes['logo']}
+      aria-label="Логотип"
+      aria-description="Логотип сайта является ссылкой на главную страницу"
+    >
+      {children}
+    </Link>
   );
 };
 

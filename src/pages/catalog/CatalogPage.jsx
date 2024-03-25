@@ -1,6 +1,6 @@
 import React from 'react';
 import classes from './CatalogPage.module.css';
-import { headphones } from './headphones';
+import { headphones } from './headphones'
 import CatalogCard from '../../components/card/CatalogCard';
 
 const CatalogPage = () => {

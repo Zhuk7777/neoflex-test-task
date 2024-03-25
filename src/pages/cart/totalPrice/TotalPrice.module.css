@@ -35,7 +35,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  border: none;
+  border: 1px solid transparent;
   border-radius: 20px;
   box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.25);
   color: #fff;
@@ -59,4 +59,12 @@
 
 .total-price-card__button:hover {
   opacity: 0.8;
+}
+
+.total-price-card__button_disabled {
+  border-color: #101010;
+  box-shadow: none;
+  color: #101010;
+  background-color: #fff;
+  pointer-events: none;
 }
