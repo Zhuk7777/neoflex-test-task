@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import classes from './TotalPrice.module.css';
 import { AppContext } from '../../../providers/AppProvider';
 
-const TotalPrice = ({className}) => {
+const TotalPrice = ({className, popupId}) => {
   const {totalPrice} = useContext(AppContext);
 
   return (
@@ -19,6 +19,8 @@ const TotalPrice = ({className}) => {
       <button
         type="button"
         className={totalPrice > 0 ? classes['total-price-card__button'] : `${classes['total-price-card__button']} ${classes['total-price-card__button_disabled']}`}
+        onClick={() => window[popupId].showModal()}
+        aria-controls={popupId}
       >
         Перейти к оформлению
       </button>

@@ -1,0 +1,125 @@
+.popup__form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  inline-size: 100%;
+}
+
+.form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #1c1c27;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.form__input {
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 10px 15px;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #eee;
+  transition: border-color 0.25s;
+  inline-size: 100%;
+  min-block-size: 47px;
+}
+
+.form__input_error {
+  border-block-end-color: rgba(255, 0, 0, 1);
+}
+
+.form__input:focus {
+  outline: none;
+}
+
+.form__input:focus-visible {
+  border-color: #101010;
+}
+
+.form__error {
+  display: block;
+  color: rgba(255, 0, 0, 1);
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14.52px;
+  min-block-size: 20px;
+}
+
+.form__fieldset {
+  display: flex;
+  align-items: flex-end;
+  gap: 10px;
+  border: none;
+  padding: 0;
+  outline: none;
+}
+
+.form__cvv-code {
+  position: relative;
+}
+
+.cvv-code__visibility-controls {
+  position: absolute;
+	top: 12px;
+	right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  background-color: transparent;
+  transition: opacity 0.25s, border-color 0.25s;
+  cursor: pointer;
+}
+
+.cvv-code__visibility-controls:hover {
+  opacity: 0.6;
+}
+
+.cvv-code__visibility-controls:focus {
+  outline: none;
+}
+
+.cvv-code__visibility-controls:focus-visible {
+  border-color: #101010;
+}
+
+.cvv-code__visibility-icon {
+  block-size: 20px;
+  inline-size: 20px;
+}
+
+.form__button {
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 5px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 16px;
+  background-color: #101010;
+  transition: opacity 0.25s;
+  cursor: pointer;
+  inline-size: 100%;
+  min-block-size: 50px;
+}
+
+.form__button:hover {
+  opacity: 0.8;
+}
+
+.form__button:focus {
+  outline: none;
+}
+
+.form__button:focus-visible {
+  opacity: 0.6;
+}
+
+.form__button_disabled {
+  border-color: #101010;
+  color: #101010;
+  background-color: transparent;
+  pointer-events: none;
+}
