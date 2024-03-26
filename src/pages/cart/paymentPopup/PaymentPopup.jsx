@@ -59,11 +59,11 @@ const PaymentPopup = ({popupId}) => {
           <input
             className={classes['form__input']}
             type="text"
-            inputmode="numeric"
-            autocomplete="cc-number"
+            inputMode="numeric"
+            autoComplete="cc-number"
             placeholder="0000 0000 0000 0000"
-            minlength="16"
-            maxlength="16"
+            minLength="16"
+            maxLength="16"
             pattern="^\d+$"
             data-error-message="Разрешены только цифры"
             required
@@ -97,7 +97,7 @@ const PaymentPopup = ({popupId}) => {
             <input
               className={classes['form__input']}
               type="text"
-              autocomplete="cc-exp"
+              autoComplete="cc-exp"
               placeholder="ММ/ГГ"
               minLength="5"
               maxLength="5"
@@ -116,8 +116,8 @@ const PaymentPopup = ({popupId}) => {
               <input
                 className={classes['form__input']}
                 type="password"
-                inputmode="numeric"
-                autocomplete="cc-csc"
+                inputMode="numeric"
+                autoComplete="cc-csc"
                 minLength="3"
                 maxLength="3"
                 pattern="^\d+$"
