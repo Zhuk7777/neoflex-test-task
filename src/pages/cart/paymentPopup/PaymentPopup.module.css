@@ -12,6 +12,7 @@
   color: #1c1c27;
   font-weight: 500;
   font-size: 16px;
+  inline-size: 100%;
 }
 
 .form__input {
@@ -23,7 +24,7 @@
   background-color: #eee;
   transition: border-color 0.25s;
   inline-size: 100%;
-  min-block-size: 47px;
+  min-block-size: 50px;
 }
 
 .form__input_error {
@@ -44,7 +45,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 14.52px;
-  min-block-size: 20px;
+  min-block-size: 45px;
 }
 
 .form__fieldset {
@@ -122,4 +123,10 @@
   color: #101010;
   background-color: transparent;
   pointer-events: none;
+}
+
+@media (width <= 650px) {
+  .form__fieldset {
+    flex-direction: column;
+  }
 }

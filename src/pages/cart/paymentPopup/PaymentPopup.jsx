@@ -67,10 +67,11 @@ const PaymentPopup = ({popupId}) => {
             pattern="^\d+$"
             data-error-message="Разрешены только цифры"
             required
+            aria-describedby="card-number-error"
             onChange={cardNumberInputOnChange}
           >
           </input>
-          <span className={classes['form__error']}>{cardNumberErrorMessage}</span>
+          <span id="card-number-error" className={classes['form__error']}>{cardNumberErrorMessage}</span>
         </label>
         <label className={classes['form__field']}>
           Имя на карте
@@ -83,10 +84,11 @@ const PaymentPopup = ({popupId}) => {
             pattern="^[a-zA-Z\s\-]+$"
             data-error-message="Разрешены только латинские буквы, знаки дефиса и пробелы"
             required
+            aria-describedby="card-name-error"
             onChange={nameInputOnChange}
           >
           </input>
-          <span className={classes['form__error']}>{nameErrorMessage}</span>
+          <span id="card-name-error" className={classes['form__error']}>{nameErrorMessage}</span>
         </label>
         <fieldset className={classes['form__fieldset']}>
           <legend className="visually-hidden">Срок действия и CVV-код</legend>
@@ -102,10 +104,11 @@ const PaymentPopup = ({popupId}) => {
               pattern="^\d+\/\d+$"
               data-error-message="Ответ должен соответствовать формату ММ/ГГ"
               required
+              aria-describedby="card-period-error"
               onChange={periodInputOnChange}
             >
             </input>
-            <span className={classes['form__error']}>{periodErrorMessage}</span>
+            <span id="card-period-error" className={classes['form__error']}>{periodErrorMessage}</span>
           </label>
           <label className={classes['form__field']}>
             CVV
@@ -120,6 +123,7 @@ const PaymentPopup = ({popupId}) => {
                 pattern="^\d+$"
                 data-error-message="Разрешены только цифры"
                 required
+                aria-describedby="card-code-error"
                 ref={codeInputRef}
                 onChange={codeInputOnChange}
               >
@@ -128,11 +132,12 @@ const PaymentPopup = ({popupId}) => {
                 type="button"
                 className={classes['cvv-code__visibility-controls']}
                 onClick={changeCodedVisibility}
+                aria-label="Изменить видимость CVV-кода"
               >
                 <img className={classes['cvv-code__visibility-icon']} src={codeIconVisibility} alt="Видимость"/>
               </button>
             </div>
-            <span className={classes['form__error']}>{codeErrorMessage}</span>
+            <span id="card-code-error" className={classes['form__error']}>{codeErrorMessage}</span>
           </label>
         </fieldset>
         <button type="submit" className={classes['form__button']} ref={submitButtonRef}>Оплатить {totalPrice} ₽</button>
